@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:textSize="30dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:id="@+id/show_time_tv_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:textSize="30dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:id="@+id/show_time_tv_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:textSize="30dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:id="@+id/show_time_tv_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:textSize="30dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:id="@+id/show_time_tv_four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:textSize="30dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:id="@+id/show_time_tv_five"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:textSize="30dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:id="@+id/show_time_tv_six"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        />
+</LinearLayout>
