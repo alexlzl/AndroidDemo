@@ -17,10 +17,17 @@ public class TimeTransformUtil {
      */
     public static String transform(int pauseSecond) {
         if (pauseSecond > 60 * 60 * 1000) {
-            return transformToHour(pauseSecond / 1000);
+            return transformToHour(transformSecond(pauseSecond));
         } else {
             return transformToMinute(pauseSecond, 60 * 1000);
         }
+    }
+
+    private static int transformSecond(int millisecond){
+        if(millisecond%1000>0){
+            return (millisecond / 1000)+1;
+        }
+        return millisecond / 1000;
     }
 
     /**
