@@ -23,9 +23,9 @@ public class TimeTransformUtil {
         }
     }
 
-    private static int transformSecond(int millisecond){
-        if(millisecond%1000>0){
-            return (millisecond / 1000)+1;
+    private static int transformSecond(int millisecond) {
+        if (millisecond % 1000 > 0) {
+            return (millisecond / 1000) + 1;
         }
         return millisecond / 1000;
     }
@@ -92,7 +92,7 @@ public class TimeTransformUtil {
         minuteString = minute + "";
         hourString = hour + "";
         if ("0".equals(minuteString) && "0".equals(secondString)) {
-            timeString = hourString+"小时";
+            timeString = hourString + "小时";
         } else {
             timeString = hourString + "小时" + minuteString + "分钟";
         }
