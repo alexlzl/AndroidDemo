@@ -15,7 +15,7 @@ public class TimeTransformUtil {
      * @ author LiuZhouLiang
      * @ time 2022/12/29 3:08 下午
      */
-    public static String transform(int pauseSecond) {
+    public static String transform(long pauseSecond) {
         if (pauseSecond > 60 * 60 * 1000) {
             return transformToHour(transformSecond(pauseSecond));
         } else {
@@ -23,9 +23,9 @@ public class TimeTransformUtil {
         }
     }
 
-    private static int transformSecond(int millisecond) {
-        if (millisecond % 1000 > 0) {
-            return (millisecond / 1000) + 1;
+    private static long transformSecond(long millisecond){
+        if(millisecond%1000>0){
+            return (millisecond / 1000)+1;
         }
         return millisecond / 1000;
     }
@@ -37,7 +37,7 @@ public class TimeTransformUtil {
      * @ author LiuZhouLiang
      * @ time 2022/12/29 3:12 下午
      */
-    private static String transformToMinute(int pauseTime, int minute) {
+    private static String transformToMinute(long pauseTime, int minute) {
         String result = "";
         float num = (float) pauseTime / minute;
 
@@ -73,10 +73,10 @@ public class TimeTransformUtil {
      * @ author LiuZhouLiang
      * @ time 2022/12/29 3:13 下午
      */
-    private static String transformToHour(int time) {
-        int second = time % 60;
-        int minute = time / 60;
-        int hour = 0;
+    private static String transformToHour(long time) {
+        long second = time % 60;
+        long minute = time / 60;
+        long hour = 0;
         if (minute >= 60) {
             hour = minute / 60;
             minute = minute % 60;
@@ -90,9 +90,15 @@ public class TimeTransformUtil {
             minute++;
         }
         minuteString = minute + "";
+        if(minuteString.equals("60")){
+            minuteString="0";
+            hour++;
+        }
         hourString = hour + "";
         if ("0".equals(minuteString) && "0".equals(secondString)) {
-            timeString = hourString + "小时";
+            timeString = hourString+"小时";
+        }else if("0".equals(minuteString) && !"0".equals(secondString)) {
+            timeString = hourString+"小时";
         } else {
             timeString = hourString + "小时" + minuteString + "分钟";
         }
