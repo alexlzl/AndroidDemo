@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">demo8</string>
+    <string name="notification_content">notification_content</string>
+    <string name="notification_sub_content">notification_sub_content</string>
+</resources>
